@@ -1,8 +1,8 @@
 ﻿#include "EchoHandler_Server.h"
 
-#include "../../../Modules/IOCPEngine/HandlerTable/PacketHandlerTable.h" // for PacketHandlerTable
-#include "../../../Modules/IOCPEngine/Session/ClientSession.h" // for ClientSession
-#include "../../../Modules/IOCPEngine/Memory/SlabMemoryPoolHelper.h" // for MEMORY_POOL
+#include "../../../../../Module/IOCPNetworkEngine/HandlerTable/PacketHandlerTable.h" // for PacketHandlerTable
+#include "../../../../../Module/IOCPNetworkEngine/Session/ClientSession.h" // for ClientSession
+#include "../../../../../Module/IOCPNetworkEngine/Memory/SlabMemoryPoolHelper.h" // for MEMORY_POOL
 
 #include "../../EchoProtocol/EchoPacket.h" // for Request, Response Packet Structure
 #include "../../EchoProtocol/EchoPacketID.h" // for ECHO_PACKET_ID

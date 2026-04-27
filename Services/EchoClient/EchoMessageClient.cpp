@@ -2,15 +2,15 @@
 
 #include <string.h>
 
-#include "../../Modules/IOCPEngine/Job/Job.h"
-#include "../../Modules/IOCPEngine/HandlerTable/PacketHandlerTable.h"
+#include "../../../../Module/IOCPNetworkEngine/Job/Job.h"
+#include "../../../../Module/IOCPNetworkEngine/HandlerTable/PacketHandlerTable.h"
 
-#include "../../Modules/IOCPEngine/Memory/SlabMemoryPoolHelper.h"
+#include "../../../../Module/IOCPNetworkEngine/Memory/SlabMemoryPoolHelper.h"
 
-#include "../../Modules/IOCPEngine/Protocol/PacketID.h"
+#include "../../../../Module/IOCPNetworkEngine/Protocol/PacketID.h"
 
-#include "../../Modules/IOCPEngine/Session/SessionJobQueue.h"
-#include "../../Modules/IOCPEngine/Session/ClientSession.h" // for ClientSession
+#include "../../../../Module/IOCPNetworkEngine/Session/SessionJobQueue.h"
+#include "../../../../Module/IOCPNetworkEngine/Session/ClientSession.h" // for ClientSession
 
 #include "../EchoProtocol/EchoPacket.h"
 #include "./PacketHandler/EchoHandler_Client.h"

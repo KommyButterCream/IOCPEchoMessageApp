@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../../Modules/IOCPEngine/Core/IOCPClient.h" // for IOCPClient
+#include "../../../../Module/IOCPNetworkEngine/Core/IOCPClient.h" // for IOCPClient
 
 #ifdef BUILD_IOCP_ECHO_CLIENT_DLL
 #define IOCP_ECHO_CLIENT_API __declspec(dllexport)

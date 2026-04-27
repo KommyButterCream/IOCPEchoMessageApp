@@ -1,8 +1,8 @@
 #include "EchoHandler_Client.h"
 
-#include "../../../Modules/IOCPEngine/HandlerTable/PacketHandlerTable.h" // for PacketHandlerTable
-#include "../../../Modules/IOCPEngine/Session/ClientSession.h" // for ClientSession
-#include "../../../Modules/Core/Util/Logger.h"
+#include "../../../../../Module/IOCPNetworkEngine/HandlerTable/PacketHandlerTable.h" // for PacketHandlerTable
+#include "../../../../../Module/IOCPNetworkEngine/Session/ClientSession.h" // for ClientSession
+#include "../../../../../Module/Core/Util/Logger.h"
 
 #include "../../EchoProtocol/EchoPacket.h" // for Request, Response Packet Structure
 #include "../../EchoProtocol/EchoPacketID.h" // for ECHO_PACKET_ID

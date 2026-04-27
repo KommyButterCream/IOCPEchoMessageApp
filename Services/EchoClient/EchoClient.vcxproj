@@ -27,10 +27,10 @@
     <ClInclude Include="PacketHandler\EchoHandler_Client.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\Core\Core\Core.vcxproj">
+    <ProjectReference Include="..\..\..\..\Module\Core\Core\Core.vcxproj">
       <Project>{e3bd70c4-fc37-4703-9a54-152fd00bdea2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\Modules\IOCPEngine\IOCPNetworkEngine\IOCPNetworkEngine.vcxproj">
+    <ProjectReference Include="..\..\..\..\Module\IOCPNetworkEngine\IOCPNetworkEngine\IOCPNetworkEngine.vcxproj">
       <Project>{8baeddcb-b352-4813-a055-9ad3b9ee8653}</Project>
     </ProjectReference>
   </ItemGroup>

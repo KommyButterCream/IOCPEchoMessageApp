@@ -128,7 +128,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Modules\IOCPEngine\IOCPNetworkEngine\IOCPNetworkEngine.vcxproj">
+    <ProjectReference Include="..\..\..\..\Module\IOCPNetworkEngine\IOCPNetworkEngine\IOCPNetworkEngine.vcxproj">
       <Project>{8baeddcb-b352-4813-a055-9ad3b9ee8653}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Services\EchoServer\EchoServer.vcxproj">
