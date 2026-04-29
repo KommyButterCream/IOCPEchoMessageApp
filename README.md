@@ -2,7 +2,7 @@
 Sample echo message application built on top of `Core` and `IOCPNetworkEngine`.
 
 # Info
-`IOCPEchoMessageApp` is a Windows C++ sample project that integrates the `Core` library and the `IOCPNetworkEngine` network engine as Git submodules.
+`IOCPEchoMessageApp` is a Windows C++ sample project that integrates the `Core` library and the `IOCPNetworkEngine` network engine as sibling repositories/projects.
 
 This repository provides:
 - Echo message server application
@@ -12,14 +12,14 @@ This repository provides:
 
 # Features
 - Echo server/client example built on IOCP
-- `Core` and `IOCPNetworkEngine` integrated as submodules
+- Integration with shared `Core` and `IOCPNetworkEngine` projects
 - Shared protocol definitions for packet-based communication
 - Separate application and service layer structure
 - Visual Studio solution for end-to-end build and test
 
 # Dependencies
-- [Core](./Modules/Core)
-- [IOCPNetworkEngine](./Modules/IOCPEngine)
+- Core
+- IOCPNetworkEngine
 - Windows WinSock2 / MSWSock
 - C++20
 - MSVC (Visual Studio 2022)
@@ -36,24 +36,31 @@ This repository provides:
 - `Services/EchoServer/` : echo server service logic
 - `Services/EchoClient/` : echo client service logic
 - `Services/EchoProtocol/` : shared packet/protocol definitions
-- `Modules/Core/` : Core library submodule
-- `Modules/IOCPEngine/` : IOCP network engine submodule
+- `IOCPEchoMessageApp/` : shared application-level project
 
-# Notes
-- This repository depends on Git submodules.
-- Make sure submodules are initialized before opening the solution.
-- `IOCPNetworkEngine` itself also uses `Modules/Core` internally, so recursive submodule initialization is recommended.
-- The solution is intended for Windows-based development with Visual Studio 2022.
+# Repository Layout
+This project expects `IOCPEchoMessageApp`, `Core`, and `IOCPNetworkEngine` to be placed under the same parent directory.
+
+Example:
+```text
+Module/
++-- Core/
++-- IOCPNetworkEngine/
++-- IOCPEchoMessageApp/
+```
+
+The Visual Studio solution references:
+- `../Core/Core/Core.vcxproj`
+- `../IOCPNetworkEngine/IOCPNetworkEngine/IOCPNetworkEngine.vcxproj`
 
 # Clone
-- Clone with submodules:
+- Clone this repository:
 ```bash
-git clone --recurse-submodules https://github.com/KommyButterCream/IOCPEchoMessageApp.git
+git clone https://github.com/KommyButterCream/IOCPEchoMessageApp.git
 ```
-- If already cloned without submodules:
-```bash
-git submodule update --init --recursive
-```
+
+Also make sure the `Core` and `IOCPNetworkEngine` repositories are cloned as sibling directories under the same parent directory.
+
 # Build
 1. Open `IOCPEchoMessageApp.sln` in Visual Studio 2022
 2. Select `Debug | x64` or `Release | x64`
@@ -69,3 +76,8 @@ This project is intended as:
 - an integration example of `Core` and `IOCPNetworkEngine`
 - a sample echo client/server application
 - a base project for further network application development
+
+# Notes
+- The shared `Core` library and `IOCPNetworkEngine` are managed as sibling repositories/projects.
+- Open `IOCPEchoMessageApp.sln` with Visual Studio 2022.
+- Build the x64 configuration before running the server/client applications.
